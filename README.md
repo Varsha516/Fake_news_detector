@@ -42,11 +42,11 @@ The system also uses verified sources (via external APIs) to cross-check news cr
 ---
 
 ##  Screenshots
-(Screenshots go in /public/screenshots)
 
-Example:
-- `result-page.png`  
-- `homepage.png`  
+
+
+- `After_news_page.png`  
+- `Landing_page.png`  
 
 ---
 
@@ -57,5 +57,6 @@ Example:
 **Varshitha Ambu**  
 Frontend & Web Development Enthusiast  
 GitHub: https://github.com/Varsha516
+
 
 
