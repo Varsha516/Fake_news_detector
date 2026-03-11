@@ -1,62 +1,65 @@
-#  AI Fake News Detector
-A machine learning-based Fake News Detector that classifies news headlines or text as **Real** or **Fake**.  
-The system also uses verified sources (via external APIs) to cross-check news credibility and display matched articles.
+AI Fake News Detector
 
----
+A web-based system that analyzes news headlines or text and predicts whether the news is Real or Fake.
+The application combines a machine learning text classification model with search engine APIs to cross-check information from trusted sources.
 
-##  Features
-- Detect Fake vs Real News using a trained ML model  
-- Shows Model Confidence Score  
-- Uses search engine APIs to pull **verified sources**  
-- Clean and modern UI built with HTML, CSS, JS  
-- Backend built using Python + ML model (kept private for security)
+Features
 
----
+Detects Real vs Fake news using a trained machine learning model
 
-##  How It Works
-1. User enters a news headline  
-2. Model analyzes the input using trained vectorizers  
-3. Backend searches real articles from trusted sources (CNET, NYT, Gizmodo, etc.)  
-4. Results are displayed with:
-   - Prediction (Real / Fake)
-   - Model Confidence %
-   - Verified sources list
+Displays model confidence score for prediction
 
----
+Fetches related articles from trusted sources using search APIs
 
+Provides verified source links for credibility comparison
 
+Clean and responsive user interface
 
----
+How It Works
 
-## 🛠 Tech Stack
-### **Frontend**
-- HTML  
-- CSS  
-- JavaScript  
+User enters a news headline or text.
 
-### **Backend**
-- Python  
-- Machine Learning Model  
-- API Integrations (Search Engine APIs)
+The system processes the text using vectorization techniques and the trained ML model.
 
----
+The backend retrieves related news articles from trusted websites using search APIs.
 
-##  Screenshots
+The application displays:
 
+Prediction (Real / Fake)
 
+Confidence score from the model
 
-- `After_news_page.png`  
-- `Landing_page.png`  
+List of verified articles from trusted sources.
 
----
+Tech Stack
+Frontend
 
+HTML
 
----
+CSS
 
-##  Developer
-**Varshitha Ambu**  
-Frontend & Web Development Enthusiast  
-GitHub: https://github.com/Varsha516
+JavaScript
 
+Backend
 
+Python
 
+Flask
+
+Machine Learning
+
+Text Vectorization
+
+Classification Model
+
+Integrations
+
+Search Engine APIs for source verification
+
+Developer
+
+Ambu Varshitha
+Frontend & Web Development Enthusiast
+
+GitHub:
+https://github.com/Varsha516
