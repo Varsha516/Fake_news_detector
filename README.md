@@ -1,60 +1,35 @@
-AI Fake News Detector
+# Fake News Verification System
 
-A web-based system that analyzes news headlines or text and predicts whether the news is Real or Fake.
-The application combines a machine learning text classification model with search engine APIs to cross-check information from trusted sources.
+A Flask-based web application that verifies whether a news statement is **Real or Fake** using a Machine Learning model and external news verification sources.
 
-Features
+The system combines **ML prediction** with **trusted news sources and search engine results** to improve reliability.
 
-Detects Real vs Fake news using a trained machine learning model
+---
 
-Displays model confidence score for prediction
+## Features
 
-Fetches related articles from trusted sources using search APIs
+• Detects whether a news statement is **Real or Fake** using a trained ML model  
+• Displays **confidence score** for prediction  
+• Retrieves related articles from **NewsAPI**  
+• Uses **Google Custom Search** as fallback if news sources are not found  
+• Shows **verified sources and links** for user reference  
+• Simple web interface built with **Flask + HTML + CSS**
 
-Provides verified source links for credibility comparison
+---
 
-Clean and responsive user interface
+## Technologies Used
 
-How It Works
+Python  
+Flask  
+Machine Learning  
+Requests API  
+Google Custom Search API  
+NewsAPI  
+HTML / CSS
 
-User enters a news headline or text.
+---
 
-The system processes the text using vectorization techniques and the trained ML model.
 
-The backend retrieves related news articles from trusted websites using search APIs.
-
-The application displays:
-
-Prediction (Real / Fake)
-
-Confidence score from the model
-
-List of verified articles from trusted sources.
-
-Tech Stack
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-Backend
-
-Python
-
-Flask
-
-Machine Learning
-
-Text Vectorization
-
-Classification Model
-
-Integrations
-
-Search Engine APIs for source verification
 
 Developer
 
