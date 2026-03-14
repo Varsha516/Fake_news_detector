@@ -9,3 +9,4 @@ dotenv
 flask
 google-api-python-client
 requests
+gunicorn
