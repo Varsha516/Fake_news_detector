@@ -5,7 +5,7 @@ from urllib.parse import quote
 from googleapiclient.discovery import build
 
 # Load environment variables
-load_dotenv("key.env")
+load_dotenv()
 
 app = Flask(__name__)
 
