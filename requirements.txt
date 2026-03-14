@@ -5,3 +5,7 @@ numpy
 joblib
 GoogleNews
 python-dateutil
+dotenv
+flask
+google-api-python-client
+requests
