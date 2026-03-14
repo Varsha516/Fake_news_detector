@@ -16,6 +16,14 @@ model = joblib.load("model.pkl")
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
+if not NEWS_API_KEY:
+    print("Warning: NEWS_API_KEY not found")
+
+if not GOOGLE_API_KEY:
+    print("Warning: GOOGLE_API_KEY not found")
+
+if not GOOGLE_CSE_ID:
+    print("Warning: GOOGLE_CSE_ID not found")
 
 
 def google_search(query, api_key, cse_id, num=5):
@@ -85,4 +93,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
