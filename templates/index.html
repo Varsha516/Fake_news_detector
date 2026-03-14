@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 40px;
+            color: #38bdf8;
+        }
+
+        form {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            resize: none;
+            background: #334155;
+            color: white;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 15px;
+            background-color: #38bdf8;
+            color: #0f172a;
+            font-size: 1rem;
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #0284c7;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            background-color: #1e293b;
+            border-left: 5px solid #38bdf8;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            max-width: 700px;
+        }
+
+        .result-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #a5f3fc;
+        }
+
+        .confidence {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1> AI Fake News Detector</h1>
+    <form method="POST">
+        <textarea name="news" placeholder="Enter news text or headline here..." required></textarea><br>
+        <button type="submit">Check Authenticity</button>
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+        <h2>Result: 
+            {% if result == "Real" %}
+                <span style="color: #4ade80;">✅ Real News</span>
+            {% elif result == "Fake" %}
+                <span style="color: #f87171;">❌ Fake News</span>
+            {% else %}
+                <span>{{ result }}</span>
+            {% endif %}
+        </h2>
+
+        {% if confidence %}
+        <p>Model Confidence: <span class="confidence">{{ confidence }}%</span></p>
+        {% endif %}
+
+        {% if sources %}
+        <h3> Verified Sources:</h3>
+        <ul>
+            {% for src in sources %}
+            <li><a href="{{ src.url }}" target="_blank">{{ src.title }}</a> <br>
+                <small>Source: {{ src.source }}</small>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+</body>
+</html>
